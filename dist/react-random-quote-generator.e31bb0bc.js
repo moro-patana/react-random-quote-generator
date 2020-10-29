@@ -29789,11 +29789,18 @@ var _refresh = _interopRequireDefault(require("../img/refresh.svg"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Quotation({
-  quoteText
+  quoteText,
+  quoteAuthor,
+  quoteGenre
 }) {
+  const handleClick = e => {
+    console.log("click");
+  };
+
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, /*#__PURE__*/_react.default.createElement("q", null, quoteText)), /*#__PURE__*/_react.default.createElement("div", {
     className: "random"
   }, /*#__PURE__*/_react.default.createElement("span", null, "random"), /*#__PURE__*/_react.default.createElement("button", {
+    onClick: handleClick,
     className: "random-btn"
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: _refresh.default
@@ -29801,7 +29808,7 @@ function Quotation({
     className: "author"
   }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("a", {
     href: "/"
-  }, "Author")), /*#__PURE__*/_react.default.createElement("span", null, "Job")));
+  }, quoteAuthor)), /*#__PURE__*/_react.default.createElement("span", null, quoteGenre)));
 }
 
 var _default = Quotation;
