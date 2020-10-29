@@ -29772,7 +29772,41 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"pages/App.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"img/refresh.svg":[function(require,module,exports) {
+module.exports = "/refresh.bd04da4f.svg";
+},{}],"pages/quotation.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _refresh = _interopRequireDefault(require("../img/refresh.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Quotation({
+  quoteText
+}) {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("q", null, quoteText)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "random"
+  }, /*#__PURE__*/_react.default.createElement("span", null, "random"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "random-btn"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _refresh.default
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "author"
+  }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("a", {
+    href: "/"
+  }, "Author")), /*#__PURE__*/_react.default.createElement("span", null, "Job")));
+}
+
+var _default = Quotation;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../img/refresh.svg":"img/refresh.svg"}],"pages/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29781,6 +29815,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _quotation = _interopRequireDefault(require("./quotation.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -29795,19 +29833,26 @@ function App() {
   async function fetchData() {
     const res = await fetch(url);
     const data = await res.json();
-    setQuote(data);
+    setQuote(data.quote);
+    console.log(data);
+  }
+
+  async function fetchData() {
+    const res = await fetch(url);
+    const data = await res.json();
+    setQuote(data.quote);
     console.log(data);
   }
 
   (0, _react.useEffect)(() => {
     fetchData();
   }, []);
-  return /*#__PURE__*/_react.default.createElement("h1", null, "Hello");
+  return /*#__PURE__*/_react.default.createElement(_quotation.default, quote);
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./quotation.js":"pages/quotation.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
