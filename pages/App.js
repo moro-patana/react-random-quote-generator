@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-const url = "https://quote-garden.herokuapp.com/api/v2/quotes?page=1&limit=10"
+const url = "https://quote-garden.herokuapp.com/api/v2/quotes/random"
 function App() {
   const [quote, setQuote] = useState([])
   const [author, setAuthor] = useState("")
