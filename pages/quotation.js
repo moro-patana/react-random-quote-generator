@@ -3,7 +3,7 @@ import refreshIcon from "../img/refresh.svg"
 function Quotation({quoteText}) {
     return (
         <div>
-            <p><q>{quoteText}</q></p>
+            <h3><q>{quoteText}</q></h3>
             <div className="random">
                 <span>random</span>
                 <button className="random-btn"><img src={refreshIcon} /></button>

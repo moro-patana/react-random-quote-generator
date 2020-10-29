@@ -29791,7 +29791,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Quotation({
   quoteText
 }) {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("q", null, quoteText)), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, /*#__PURE__*/_react.default.createElement("q", null, quoteText)), /*#__PURE__*/_react.default.createElement("div", {
     className: "random"
   }, /*#__PURE__*/_react.default.createElement("span", null, "random"), /*#__PURE__*/_react.default.createElement("button", {
     className: "random-btn"
