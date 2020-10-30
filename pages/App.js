@@ -15,6 +15,10 @@ function App() {
   useEffect(() => {
      fetchData()
   }, [])
+  const handleClick = (e) => {
+    fetchData()
+}
+
     return (
         <Router >
             <Switch>
@@ -22,7 +26,7 @@ function App() {
                     <QuotesByAuthor/>
                 </Route>
                 <Route path='/'>
-                <Quotation {...quote}/>
+                <Quotation handleClick={handleClick} {...quote}/>
                 </Route>
             </Switch>
         </Router>
