@@ -16,9 +16,8 @@ function QuotesByAuthor({ quotes }) {
     useEffect(() => {
         fetchAuthorName()
     },[])
-// console.log(author);
     return (
-        <div>
+        <div className="container">
             <ul>
                 {author.map((list) => (
                     <li key={list.id}>{list.quoteText}</li>

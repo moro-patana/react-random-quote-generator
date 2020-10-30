@@ -33941,9 +33941,10 @@ function QuotesByAuthor({
 
   (0, _react.useEffect)(() => {
     fetchAuthorName();
-  }, []); // console.log(author);
-
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, author.map(list => /*#__PURE__*/_react.default.createElement("li", {
+  }, []);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement("ul", null, author.map(list => /*#__PURE__*/_react.default.createElement("li", {
     key: list.id
   }, list.quoteText))));
 }
