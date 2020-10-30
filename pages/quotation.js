@@ -2,7 +2,7 @@ import React from "react"
 import refreshIcon from "../img/refresh.svg"
 function Quotation({quoteText, quoteAuthor, quoteGenre}) {
     const handleClick = (e) => {
-        console.log("click");
+        window.location.reload();
     }
     return (
         <div>
