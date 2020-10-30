@@ -35,5 +35,12 @@ span {
     background: none;
     border: none;
 }
+ul {
+    margin: 0;
+}
+li {
+    list-style: none;
+    padding: 1rem;
+}
 
 /*# sourceMappingURL=/react-random-quote-generator.9ad09f98.css.map */
