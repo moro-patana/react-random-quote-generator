@@ -35,10 +35,15 @@ span {
     background: none;
     border: none;
 }
+.container {
+    background-color: aliceblue;
+    padding: 1rem;
+}
 ul {
     margin: 0;
 }
 li {
+    font-size: 18px;
     list-style: none;
     padding: 1rem;
 }
