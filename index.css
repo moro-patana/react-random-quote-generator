@@ -29,6 +29,7 @@ img {
 }
 span {
     padding: 1rem;
+    color: darkgray;
 }
 .random-btn {
     background: none;
