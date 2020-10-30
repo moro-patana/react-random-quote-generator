@@ -12,7 +12,7 @@ function Quotation({quoteText, quoteAuthor, quoteGenre}) {
     console.log(quoteAuthor);
     return (
         <div>
-            <h3><q>{quoteText}</q></h3>
+            <p><q>{quoteText}</q></p>
             <div className="random">
                 <span>random</span>
                 <button onClick={handleClick} className="random-btn"><img src={refreshIcon} /></button>

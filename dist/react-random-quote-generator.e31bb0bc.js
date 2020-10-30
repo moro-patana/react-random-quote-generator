@@ -33888,7 +33888,7 @@ function Quotation({
   };
 
   console.log(quoteAuthor);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, /*#__PURE__*/_react.default.createElement("q", null, quoteText)), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("q", null, quoteText)), /*#__PURE__*/_react.default.createElement("div", {
     className: "random"
   }, /*#__PURE__*/_react.default.createElement("span", null, "random"), /*#__PURE__*/_react.default.createElement("button", {
     onClick: handleClick,
@@ -33946,7 +33946,9 @@ function QuotesByAuthor({
     className: "container"
   }, /*#__PURE__*/_react.default.createElement("ul", null, author.map(list => /*#__PURE__*/_react.default.createElement("li", {
     key: list.id
-  }, list.quoteText))));
+  }, /*#__PURE__*/_react.default.createElement("q", null, list.quoteText)))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, "Back to main page"));
 }
 
 var _default = QuotesByAuthor;
